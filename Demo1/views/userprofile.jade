@@ -1,0 +1,14 @@
+extends layout
+
+block content
+        h1(align="center") UserProfile
+        div(align="right")
+            a(href="/users") Home
+        div#messagebox
+            p 头像:
+            img(src="/images/images.jpg")
+            p 文档上传:
+                form#picform(action="/upload",method="post",enctype='multipart/form-data')
+                    input(type="file" name="file1")
+                    input(type="submit")
+            p username: #{username}

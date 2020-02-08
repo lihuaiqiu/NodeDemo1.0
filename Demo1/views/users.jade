@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    h1(align="center") Commemt Board
+    div#test(align="right")
+        a(href='/users/userprofile') User Profile
+    div#logout(align="right")
+        a(href='/logout') logout
+    ul
+        each user, i in commentlist
+            li
+                p #{user.username}: #{user.comment}
+                button#hidbut(hidden) 删除评论
+
+
+    div#inputbox(align="center")
+        textarea#input
+    div#inputbutton(align="center")
+        button#SubFortxt 提交评论
+    script(src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js")
+    script(src="/javascripts/ApiForAdd.js")
+
+
+
+

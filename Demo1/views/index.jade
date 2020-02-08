@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1(align="center") 简易博客系统
+  p(align="center") Welcome to #{title}
+  div.inputbox(align="center")
+    div.usernameinput
+      input#username(type="text",placeholder="username",name="username")
+    div.passwordinput
+      input#password(type="text",placeholder="password",name="password")
+    div.buttoninput
+      button#register 注册
+      button#login 登陆
+  script(src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js")
+  script(src="/javascripts/ApiForReg.js")
+  script(src="/javascripts/ApiForLog.js")
+
+
+
